@@ -1,0 +1,10 @@
+
+.heading{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.highlight{
+    color: var(--primary-65);
+    font-weight: bold;
+}

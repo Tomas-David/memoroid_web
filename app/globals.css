@@ -1,61 +1,68 @@
-@import "tailwindcss";
+@import url("./normalize.css") layer(normalize);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@layer normalize;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --brand: #8756F6;
-  --brand-dark: #6c3fe0;
-  --brand-light: #f3eeff;
+  /* ===== LIGHT (default) ===== */
+
+  /* Background */
+  --bg: #FFFFFF;
+
+  /* Text */
+  --text-secondary: #6B7280;
+  --text-accent: #374151;
+  --text-section: #FFFFFF;
+  --text-default: #475569;
+
+  /* Primary */
+  --primary-35: #3A09A9;
+  --primary-55: #6426F3;
+  --primary-65: #8756F6;
+  --primary-75: #A986F8;
+  --primary-85: #CBB7FB;
+
+  /* Hover */
+  --hover-accent: #8B5CF6;
+
+  /* CTA */
+  --cto-bg: #F1F5F980; /* 50% opacity */
+  --cto-bg-full: #F1F5F9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ===== DARK MODE (automatic) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background */
+    --bg: #1E293B;
+
+    /* Text */
+    --text-secondary: #94A3B8;
+    --text-accent: #374151;
+    --text-section: #F1F5F9;
+    --text-default: #F1F5F9;
+
+    /* Primary */
+    --primary-35: #0F12A4;
+    --primary-55: #2C30EC;
+    --primary-65: #5B5EF0;
+    --primary-75: #8A8CF5;
+    --primary-85: #B9BAF9;
+
+    /* Hover */
+    --hover-accent: #A78BFA;
+
+    /* CTA */
+    --cto-bg: #47556980; /* 50% opacity */
+    --cto-bg-full: #475569;
+  }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text-default);
+  font-family: 'Roboto', sans-serif;
 }
 
-.prose h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  color: #1e293b;
-}
-
-.prose h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.4rem;
-  color: #334155;
-}
-
-.prose p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
-  color: #475569;
-}
-
-.prose ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  color: #475569;
-}
-
-.prose ul li {
-  margin-bottom: 0.35rem;
-  line-height: 1.65;
-}
-
-.prose a {
-  color: #8756F6;
-  text-decoration: underline;
+.page{
+  padding: 1rem;
 }

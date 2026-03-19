@@ -1,39 +1,41 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import Navbar from "../components/navbar/Navbar";
 
-const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const roboto = Roboto({ variable: "--font-roboto", subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
-  title: "Memoroid",
-  description: "Chytrá aplikace pro učení s kartičkami a AI",
+  title: "Memoroid – Multiplatformní pomocník na učení",
+  description:
+    "Mobilní aplikace Memoroid pomáhá studentům efektivně se učit pomocí flashcards, kvízů a AI tutora. Vytvořena ve Flutteru s využitím Firebase a velkých jazykových modelů.",
+  keywords: [
+    "Memoroid",
+    "mobilní aplikace",
+    "učení",
+    "flashcards",
+    "kvíz",
+    "AI tutor",
+    "Flutter",
+    "Firebase",
+    "umělá inteligence",
+    "vzdělávání",
+    "maturitní práce",
+    "multiplatformní aplikace",
+  ],
+  openGraph: {
+    title: "Memoroid – Multiplatformní pomocník na učení",
+    description:
+      "Mobilní aplikace kombinující flashcards, kvízy a AI tutora pro efektivní učení studentů středních škol.",
+    locale: "cs_CZ",
+    type: "website",
+  },
 };
 
-function Navbar() {
-  return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-      <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold" style={{ color: "#8756F6" }}>
-            Memoroid
-          </span>
-        </Link>
-        <div className="flex items-center gap-6 text-sm font-medium text-slate-600">
-          <Link href="/" className="hover:text-[#8756F6] transition-colors">
-            Domů
-          </Link>
-          <Link href="/support" className="hover:text-[#8756F6] transition-colors">
-            Podpora
-          </Link>
-          <Link href="/privacy-policy" className="hover:text-[#8756F6] transition-colors">
-            Ochrana dat
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
-}
+
+
 
 function Footer() {
   return (
@@ -56,9 +58,9 @@ function Footer() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="cs">
-      <body className={`${geist.variable} antialiased bg-white`}>
+      <body className={`${roboto.variable}`}>
         <Navbar />
-        <main>{children}</main>
+        <main className="page">{children}</main>
         <Footer />
       </body>
     </html>

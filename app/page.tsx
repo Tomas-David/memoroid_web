@@ -1,3 +1,4 @@
+import Hero from "@/components/hero/Hero";
 import Link from "next/link";
 
 const features = [
@@ -33,42 +34,10 @@ const features = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
   return (
     <div>
-      <section className="max-w-5xl mx-auto px-4 pt-20 pb-24 text-center">
-        <div
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-6"
-          style={{ background: "#f3eeff", color: "#8756F6" }}
-        >
-          🎓 Chytrý pomocník na učení
-        </div>
-        <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-          Uč se chytřeji
-          <br />
-          <span style={{ color: "#8756F6" }}>s Memoroidem</span>
-        </h1>
-        <p className="text-xl text-slate-500 max-w-2xl mx-auto mb-10">
-          Aplikace pro učení přes kartičky, kvízy a AI. Dostupná na iOS i Androidu.
-          Bezplatně, bez reklam.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-white font-semibold text-base shadow-lg hover:opacity-90 transition"
-            style={{ background: "#8756F6" }}
-          >
-            📱 Stáhnout na App Store
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-base border-2 hover:bg-slate-50 transition"
-            style={{ borderColor: "#8756F6", color: "#8756F6" }}
-          >
-            🤖 Stáhnout na Google Play
-          </a>
-        </div>
-      </section>
+      <Hero />
 
       <section className="max-w-5xl mx-auto px-4 pb-20">
         <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
