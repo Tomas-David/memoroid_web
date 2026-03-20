@@ -4,9 +4,9 @@ import classes from "./Hero.module.css";
 export default function Hero() {
   return (
     <section> 
-        <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight}  >Memoroidem</span></h1>
+        <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight} >Memoroidem</span></h1>
         <h2>
-            Aplikace pro učení pomocí AI
+            Aplikace pro učení se pomocí AI
         </h2>
     </section>
   );

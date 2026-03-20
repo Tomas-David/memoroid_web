@@ -63,6 +63,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
+a{
+  color: var(--text-default);
+  text-decoration: none;
+}
+
 .page{
   padding: 1rem;
 }
