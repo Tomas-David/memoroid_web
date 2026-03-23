@@ -16,10 +16,14 @@
 
   /* Primary */
   --primary-35: #3A09A9;
+  --primary-45: #4B0CD9;
   --primary-55: #6426F3;
   --primary-65: #8756F6;
   --primary-75: #A986F8;
   --primary-85: #CBB7FB;
+
+  --primary-65-transparent: rgba(135, 86, 246, 0.65);
+  --primary-75-transparent: rgba(169, 134, 248, 0.75);
 
   /* Hover */
   --hover-accent: #8B5CF6;
@@ -43,6 +47,7 @@
 
     /* Primary */
     --primary-35: #0F12A4;
+    --primary-45: #4B0CD9;
     --primary-55: #2C30EC;
     --primary-65: #5B5EF0;
     --primary-75: #8A8CF5;

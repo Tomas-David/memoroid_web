@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: var(--cto-bg);
+    background-color: var(--cto-bg-full);
     position: relative;
 }
 
@@ -22,7 +22,7 @@
     list-style: none;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    background-color: var(--cto-bg);
+    background-color: var(--cto-bg-full);
     width: 100%;
     left:0;
 }

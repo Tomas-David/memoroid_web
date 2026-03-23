@@ -1,7 +1,17 @@
 
 .hero{
-    background: linear-gradient(45deg, var(--primary-65) 0%, var(--primary-75) 100%);
-}
+    display: flex;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-in-out;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+background: 
+  linear-gradient(240deg, var(--primary-35), var(--primary-75)),
+  url("../../public/hey_memo.webp");
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;}
 
 .heading{
     font-size: 2.5rem;
@@ -9,19 +19,43 @@
     color: var(--text-section);
     margin: 0;
     padding: 1rem;
+    grid-column: 1;    
 }
 
 .highlight{
-    color: var(--primary-85);
+    color: var(--primary-75);
     font-weight: bold;
+}
+
+.subheading{    
+    color: var(--text-section);
+    font-weight: 400;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+    grid-column: 1;
+}
+
+.ctoButtons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 0 1rem;
+    grid-column: 1;
 }
 
 .ctoButton{
     display: inline-block;
-    background-color: var(--primary-35);
+    background-color: var(--primary-45);
     color: var(--text-section);
     padding: .75rem 1.5rem;
     border-radius: 1.5rem;
+    background-image: linear-gradient(45deg, var(--primary-35), var(--primary-55));
+    background-size: 400% 400%;
+    text-align: center;
+}
+
+.ctoButton:hover{
+    animation: btnHoverGradinet 1s ease infinite;
 }
 
 .ctoButtonOutline{
@@ -31,16 +65,46 @@
     padding: .75rem 1.5rem;
     border-radius: 1.5rem;
     border: 2px solid var(--text-section);
+    
 }
 
-.subheading{    
-    color: var(--text-section);
-    font-weight: 400;
-    margin: 0;
-    padding: 0 1rem 1rem 1rem;
+.ctoButtonOutline:hover{
+    background-color: var(--text-section);
+    color: var(--primary-45);
+    border-color: transparent;
+    animation: btnHoverGradinet 1s ease infinite;
 }
+
+
 
 .heroImageWrapper{
+    grid-column: 2;
+    position: relative;
     width: 100%;
+    height: 400px;
+    grid-column: 2;
+    grid-row: 1 / span 3;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes btnHoverGradinet {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

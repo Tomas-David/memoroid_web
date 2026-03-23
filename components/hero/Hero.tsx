@@ -5,7 +5,8 @@ import heroImage from "@/public/hey_memo.webp";
 export default function Hero() {
   return (
     <section className={classes.hero}>
-        <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight}>Memoroidem</span></h1>
+      <div>
+         <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight}>Memoroidem</span></h1>
         <h2 className={classes.subheading}>
             Aplikace pro učení se pomocí AI
         </h2>
@@ -17,12 +18,14 @@ export default function Hero() {
                 Stáhnout na Google Play
             </a>
         </div>
-        <div style={{ position: "relative", width: "100%", height: "300px" }}>
+      </div>
+       
+        <div className={classes.heroImageWrapper}>
           <Image
-            src={heroImage}
+            src=""
             alt="Hero Image"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
           />
         </div>        
     </section>
