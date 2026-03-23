@@ -1,13 +1,30 @@
 import classes from "./Hero.module.css";
-
+import Image from "next/image";
+import heroImage from "@/public/hey_memo.webp";
 
 export default function Hero() {
   return (
-    <section> 
-        <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight} >Memoroidem</span></h1>
-        <h2>
+    <section className={classes.hero}>
+        <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight}>Memoroidem</span></h1>
+        <h2 className={classes.subheading}>
             Aplikace pro učení se pomocí AI
         </h2>
+        <div className={classes.ctoButtons}>
+            <a href="https://apps.apple.com/us/app/memoroid/id6760408431" className={classes.ctoButton}>
+                Stáhnout na App Store
+            </a>
+            <a href="#" className={classes.ctoButtonOutline}>
+                Stáhnout na Google Play
+            </a>
+        </div>
+        <div style={{ position: "relative", width: "100%", height: "300px" }}>
+          <Image
+            src={heroImage}
+            alt="Hero Image"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>        
     </section>
   );
 }

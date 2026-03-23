@@ -1,10 +1,46 @@
 
+.hero{
+    background: linear-gradient(45deg, var(--primary-65) 0%, var(--primary-75) 100%);
+}
+
 .heading{
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 500;
+    color: var(--text-section);
+    margin: 0;
+    padding: 1rem;
 }
 
 .highlight{
-    color: var(--primary-65);
+    color: var(--primary-85);
     font-weight: bold;
 }
+
+.ctoButton{
+    display: inline-block;
+    background-color: var(--primary-35);
+    color: var(--text-section);
+    padding: .75rem 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.ctoButtonOutline{
+    display: inline-block;
+    background-color: transparent;
+    color: var(--text-section);
+    padding: .75rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--text-section);
+}
+
+.subheading{    
+    color: var(--text-section);
+    font-weight: 400;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.heroImageWrapper{
+    width: 100%;
+}
+

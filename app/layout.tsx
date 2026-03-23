@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="cs">
       <body className={`${roboto.variable}`}>
         <Navbar />
-        <main className="page">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

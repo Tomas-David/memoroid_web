@@ -24,9 +24,9 @@ export default function Navbar() {
  <span className={classes.brand}>Memoroid</span></Link>
         </li>
       <div className={classes.ham} onClick={toggleMenu}>
-        <span className={classes.ham_line}></span>
-        <span className={classes.ham_line}></span>
-        <span className={classes.ham_line}></span>
+        <span className={`${classes.ham_line} ${isOpen ? classes.ham_line_open : ''}`}></span>
+        <span className={`${classes.ham_line} ${isOpen ? classes.ham_line_open : ''}`}></span>
+        <span className={`${classes.ham_line} ${isOpen ? classes.ham_line_open : ''}`}></span>
       </div>
       <menu className={`${classes.navbar_menu} ${isOpen ? classes.navbar_menuOpen : classes.navbar_menuClose}`}>
 

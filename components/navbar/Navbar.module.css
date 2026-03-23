@@ -61,6 +61,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 2px;
+    transition: all 0.3s ease-in-out;
 }
 
 .ham_line:nth-child(1){
@@ -73,6 +74,18 @@
     top: 75%;
 }
 
+.ham_line_open:nth-child(1){
+    top: 50%;
+    transform: rotateZ(45deg);
+}
+.ham_line_open:nth-child(2){
+    top: 50%;
+    opacity: 0;
+}
+.ham_line_open:nth-child(3){
+    top: 50%;
+    transform: rotateZ(-45deg) ;
+}
 
 @media screen and (min-width: 568px) {
     .brand{
