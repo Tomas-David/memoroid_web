@@ -1,0 +1,21 @@
+.appPrezentationContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.appPrezentationTrack {
+    display: flex;
+    height: calc(100svh - 4rem);
+    will-change: transform;
+}
+
+.appPrezentationSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}

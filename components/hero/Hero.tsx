@@ -1,10 +1,12 @@
 import classes from "./Hero.module.css";
 import Image from "next/image";
 import heroImage from "@/public/mockup.webp";
+import Navbar from "../navbar/Navbar";
 
 export default function Hero() {
   return (
-    <section className={classes.hero}>
+  
+      <section className={classes.hero}>
       <div>
          <h1 className={classes.heading} >Uč se efektivnějí s <span className={classes.highlight}>Memoroidem</span></h1>
         <h2 className={classes.subheading}>
@@ -30,6 +32,7 @@ export default function Hero() {
           />
         </div>        
     </section>
+  
   );
 }
 

@@ -41,7 +41,7 @@ export default async function Home() {
       <Hero />
 
 
-      <AppPrezentation/>
+      <AppPrezentation />
 
       <section className="max-w-5xl mx-auto px-4 pb-20">
         <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">

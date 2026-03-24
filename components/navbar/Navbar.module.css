@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: var(--cto-bg-full);
+    background-color: transparent;
     position: relative;
 }
 
