@@ -1,6 +1,6 @@
 import classes from "./Hero.module.css";
 import Image from "next/image";
-import heroImage from "@/public/hey_memo.webp";
+import heroImage from "@/public/mockup.webp";
 
 export default function Hero() {
   return (
@@ -22,10 +22,11 @@ export default function Hero() {
        
         <div className={classes.heroImageWrapper}>
           <Image
-            src=""
+            src={heroImage}
             alt="Hero Image"
             fill
-            style={{ objectFit: "contain" }}
+            style={{objectFit: "contain", top:"10%", filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))"}}
+            className={classes.heroImage}
           />
         </div>        
     </section>

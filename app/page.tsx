@@ -1,3 +1,4 @@
+import AppPrezentation from "@/components/appPretentation/AppPrezentation";
 import Hero from "@/components/hero/Hero";
 import Link from "next/link";
 
@@ -38,6 +39,9 @@ export default async function Home() {
   return (
     <div>
       <Hero />
+
+
+      <AppPrezentation/>
 
       <section className="max-w-5xl mx-auto px-4 pb-20">
         <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
