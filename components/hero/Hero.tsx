@@ -1,4 +1,4 @@
-import classes from "./Hero.module.css";
+import classes from "./Hero.module.scss";
 import Image from "next/image";
 import heroImage from "@/public/mockup.webp";
 import Navbar from "../navbar/Navbar";

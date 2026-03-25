@@ -1,0 +1,23 @@
+@use "sass:math";
+
+$spacing-unit: 0.5rem !default;
+
+@function to-rem($px, $base: 16) {
+  @if unit($px) == "px" {
+    @return math.div($px, $base * 1px) * 1rem;
+  }
+
+  @if unitless($px) {
+    @return math.div($px, $base) * 1rem;
+  }
+
+  @error "to-rem expects a px number or a unitless number.";
+}
+
+@function space($multiplier) {
+  @if not unitless($multiplier) {
+    @error "space expects a unitless multiplier.";
+  }
+
+  @return $multiplier * $spacing-unit;
+}

@@ -1,0 +1,5 @@
+@mixin expose-theme-vars($theme-map) {
+  @each $token, $value in $theme-map {
+    --#{$token}: #{$value};
+  }
+}

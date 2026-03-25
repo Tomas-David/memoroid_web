@@ -1,14 +1,17 @@
-.brand{
+@use "../../app/styles/functions" as fn;
+
+.brand {
     display: none;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: fn.space(2) fn.space(4);
     background-color: transparent;
     position: relative;
+    background-color: var(--cto-bg-full);
 }
 
 .navbar_menu {
@@ -16,7 +19,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: fn.space(2);
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -39,7 +42,7 @@
 
 .navbar_menu_item{
     display: flex;
-    gap: 1rem;
+    gap: fn.space(2);
     padding: .5em 0;
 }
 
@@ -47,49 +50,55 @@
     display: block;
 }
 
-.ham{
+.ham {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: fn.to-rem(50);
+    height: fn.to-rem(50);
 }
 
-.ham_line{
+.ham_line {
     position: absolute;
     width: 90%;
-    height: 4px;
-    background-color: var(--text-default);
+    height: fn.to-rem(4);
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 2px;
+    border-radius: fn.to-rem(2);
+    background-color: var(--text-default);
     transition: all 0.3s ease-in-out;
+
+    &:nth-child(1) {
+        top: 25%;
+    }
+
+    &:nth-child(2) {
+        top: 50%;
+    }
+
+    &:nth-child(3) {
+        top: 75%;
+    }
 }
 
-.ham_line:nth-child(1){
-    top: 25%;
-}
-.ham_line:nth-child(2){
-    top: 50%;
-}
-.ham_line:nth-child(3){
-    top: 75%;
+.ham_line_open {
+    &:nth-child(1) {
+        top: 50%;
+        transform: rotateZ(45deg);
+    }
+
+    &:nth-child(2) {
+        top: 50%;
+        opacity: 0;
+    }
+
+    &:nth-child(3) {
+        top: 50%;
+        transform: rotateZ(-45deg);
+    }
 }
 
-.ham_line_open:nth-child(1){
-    top: 50%;
-    transform: rotateZ(45deg);
-}
-.ham_line_open:nth-child(2){
-    top: 50%;
-    opacity: 0;
-}
-.ham_line_open:nth-child(3){
-    top: 50%;
-    transform: rotateZ(-45deg) ;
-}
-
-@media screen and (min-width: 568px) {
-    .brand{
-        font-size: 2rem;
+@media screen and (min-width: fn.to-rem(568)) {
+    .brand {
+        font-size: fn.to-rem(32);
         font-weight: bold;
         color: var(--primary-65);
         display: inline;

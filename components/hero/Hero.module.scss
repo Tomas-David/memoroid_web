@@ -1,91 +1,87 @@
 
-.hero{
+@use "../../app/styles/functions" as fn;
+
+.hero {
     display: flex;
     flex-wrap: wrap;
     animation: fadeInUp 1s ease-in-out;
+    background:
+        linear-gradient(240deg, var(--primary-35), var(--primary-75)),
+        url("../../public/hey_memo.webp");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-background: 
-  linear-gradient(240deg, var(--primary-35), var(--primary-75)),
-  url("../../public/hey_memo.webp");
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;}
+}
 
-.heading{
-    font-size: 2.5rem;
+.heading {
+    font-size: fn.to-rem(40);
     font-weight: 500;
     color: var(--text-section);
     margin: 0;
-    padding: 1rem;
-    grid-column: 1;    
+    padding: fn.space(2);
+    grid-column: 1;
 }
 
-.highlight{
+.highlight {
     color: var(--primary-75);
-    font-weight: bold;
+    font-weight: 700;
 }
 
-.subheading{    
+.subheading {
     color: var(--text-section);
     font-weight: 400;
     margin: 0;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 fn.space(2) fn.space(2);
     grid-column: 1;
 }
 
-.ctoButtons{
+.ctoButtons {
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem;
-    padding: 0 1rem;
+    gap: fn.space(1);
+    padding: 0 fn.space(2);
     grid-column: 1;
 }
 
-.ctoButton{
+.ctoButton {
     display: inline-block;
     background-color: var(--primary-45);
     color: var(--text-section);
-    padding: .75rem 1.5rem;
-    border-radius: 1.5rem;
+    padding: fn.space(1.5) fn.space(3);
+    border-radius: fn.space(3);
     background-image: linear-gradient(45deg, var(--primary-35), var(--primary-55));
     background-size: 400% 400%;
     text-align: center;
+
+    &:hover {
+        animation: btnHoverGradinet 1s ease infinite;
+    }
 }
 
-.ctoButton:hover{
-    animation: btnHoverGradinet 1s ease infinite;
-}
-
-.ctoButtonOutline{
+.ctoButtonOutline {
     display: inline-block;
     background-color: transparent;
     color: var(--text-section);
-    padding: .75rem 1.5rem;
-    border-radius: 1.5rem;
-    border: 2px solid var(--text-section);
-    
+    padding: fn.space(1.5) fn.space(3);
+    border-radius: fn.space(3);
+    border: fn.to-rem(2) solid var(--text-section);
+
+    &:hover {
+        background-color: var(--text-section);
+        color: var(--primary-45);
+        border-color: transparent;
+        animation: btnHoverGradinet 1s ease infinite;
+    }
 }
 
-.ctoButtonOutline:hover{
-    background-color: var(--text-section);
-    color: var(--primary-45);
-    border-color: transparent;
-    animation: btnHoverGradinet 1s ease infinite;
-}
-
-
-
-.heroImageWrapper{
+.heroImageWrapper {
     grid-column: 2;
     position: relative;
     width: 100%;
-    height: 400px;
-    grid-column: 2;
+    height: fn.to-rem(400);
 }
 
-.heroImage{
+.heroImage {
     animation: fadeInUp 1s ease-in-out;
     animation-fill-mode: both;
 }
@@ -94,7 +90,7 @@ background-repeat: no-repeat;}
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(fn.to-rem(20));
     }
     to {
         opacity: 1;

@@ -1,0 +1,37 @@
+$font-family-base: "Roboto", sans-serif;
+
+$theme-light: (
+  bg: #ffffff,
+  text-secondary: #6b7280,
+  text-accent: #374151,
+  text-section: #ffffff,
+  text-default: #475569,
+  primary-35: #3a09a9,
+  primary-45: #4b0cd9,
+  primary-55: #6426f3,
+  primary-65: #8756f6,
+  primary-75: #a986f8,
+  primary-85: #cbb7fb,
+  primary-65-transparent: rgba(135, 86, 246, 0.65),
+  primary-75-transparent: rgba(169, 134, 248, 0.75),
+  hover-accent: #8b5cf6,
+  cto-bg: #f1f5f980,
+  cto-bg-full: #f1f5f9
+);
+
+$theme-dark: (
+  bg: #1e293b,
+  text-secondary: #94a3b8,
+  text-accent: #374151,
+  text-section: #f1f5f9,
+  text-default: #f1f5f9,
+  primary-35: #0f12a4,
+  primary-45: #4b0cd9,
+  primary-55: #2c30ec,
+  primary-65: #5b5ef0,
+  primary-75: #8a8cf5,
+  primary-85: #b9baf9,
+  hover-accent: #a78bfa,
+  cto-bg: #47556980,
+  cto-bg-full: #475569
+);

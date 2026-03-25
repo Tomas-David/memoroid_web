@@ -1,0 +1,32 @@
+@use "../../app/styles/functions" as fn;
+
+.card {
+    width: 100%;
+    background: linear-gradient(180deg, var(--primary-35), var(--primary-65), var(--primary-75));
+    padding: fn.space(4);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: fn.space(3);
+    overflow: hidden;
+    margin-bottom: fn.space(3);
+}
+
+.image {
+    object-fit: contain;
+}
+
+.title {
+    margin: 0 0 fn.space(1);
+    color: var(--text-section);
+}
+
+.description {
+    margin: 0;
+    color: var(--text-section);
+}
+
+

@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import classes from "./Navbar.module.css";
+import classes from "./Navbar.module.scss";
 import logo from "@/public/logo.svg"
 import Image from "next/image";
 import { useState } from "react";

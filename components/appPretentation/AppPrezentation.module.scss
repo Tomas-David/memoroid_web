@@ -1,14 +1,16 @@
+@use "../../app/styles/functions" as fn;
+
 .appPrezentationContainer {
     position: relative;
     width: 100%;
     min-height: 100svh;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: fn.space(4) 0;
 }
 
 .appPrezentationTrack {
     display: flex;
-    height: calc(100svh - 4rem);
+    height: calc(100svh - #{fn.to-rem(64)});
     will-change: transform;
 }
 
@@ -17,5 +19,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+    flex: 0 0 100%;
+    padding: fn.space(8) fn.space(4);
 }

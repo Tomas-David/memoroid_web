@@ -1,0 +1,29 @@
+@use "./normalize";
+@use "./styles/functions" as fn;
+@use "./styles/mixins" as mx;
+@use "./styles/variables" as vars;
+
+:root {
+	@include mx.expose-theme-vars(vars.$theme-light);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include mx.expose-theme-vars(vars.$theme-dark);
+	}
+}
+
+body {
+	background: var(--bg);
+	color: var(--text-default);
+	font-family: vars.$font-family-base;
+}
+
+a {
+	color: var(--text-default);
+	text-decoration: none;
+}
+
+.page {
+	padding: fn.space(2);
+}
