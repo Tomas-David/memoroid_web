@@ -1,3 +1,4 @@
+import AppFunctions from "@/components/appFunctions/AppFunctions";
 import AppPrezentation from "@/components/appPretentation/AppPrezentation";
 import Hero from "@/components/hero/Hero";
 import Link from "next/link";
@@ -39,28 +40,8 @@ export default async function Home() {
   return (
     <div>
       <Hero />
-
-
       <AppPrezentation />
-
-      <section className="max-w-5xl mx-auto px-4 pb-20">
-        <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-          Vše, co potřebuješ ke studiu
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition"
-            >
-              <div className="text-3xl mb-3">{f.icon}</div>
-              <h3 className="text-lg font-bold text-slate-800 mb-1">{f.title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      <AppFunctions/>
       <section
         className="rounded-3xl mx-4 sm:mx-auto max-w-4xl mb-20 p-10 sm:p-16 text-center text-white"
         style={{ background: "linear-gradient(135deg, #8756F6, #6c3fe0)" }}

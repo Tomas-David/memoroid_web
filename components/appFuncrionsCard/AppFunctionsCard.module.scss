@@ -1,0 +1,55 @@
+@use "../../app/styles/functions" as fn;
+
+
+.card {
+  background-color: var(--cto-bg-full);
+  padding: fn.space(4);
+  border-radius: fn.space(3);
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    .svgLine {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    .line {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.svgLine {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: fn.to-rem(50);
+  height: fn.to-rem(4);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.line {
+  stroke: black;
+  stroke-width: 4;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset 0.4s ease;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: fn.space(3);
+    overflow: hidden;
+    margin-bottom: fn.space(3);
+}
+
+.image {
+    object-fit: contain;
+}

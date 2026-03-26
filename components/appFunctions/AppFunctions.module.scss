@@ -1,0 +1,13 @@
+@use '../../app/styles/functions' as fn;
+
+
+.cardSection{
+    padding: fn.space(2);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: fn.space(2);
+}
+
