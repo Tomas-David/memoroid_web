@@ -1,9 +1,10 @@
 import classes from "./AppPrezentationCard.module.scss";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 type AppPrezentationCardProps = {
     title: string;
     description: string;
-    imageSrc: string;
+    imageSrc: StaticImageData;
     imageAlt: string;
 };
 

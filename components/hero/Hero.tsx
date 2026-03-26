@@ -1,7 +1,6 @@
 import classes from "./Hero.module.scss";
 import Image from "next/image";
-import heroImage from "@/public/mockup.webp";
-import Navbar from "../navbar/Navbar";
+import heroImage from "@/public/images/mockup.webp";
 
 export default function Hero() {
   return (

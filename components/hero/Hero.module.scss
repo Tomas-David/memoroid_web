@@ -6,8 +6,7 @@
     flex-wrap: wrap;
     animation: fadeInUp 1s ease-in-out;
     background:
-        linear-gradient(240deg, var(--primary-35), var(--primary-75)),
-        url("../../public/hey_memo.webp");
+        linear-gradient(240deg, var(--primary-35), var(--primary-75));
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

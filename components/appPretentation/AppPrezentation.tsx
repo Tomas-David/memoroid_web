@@ -6,35 +6,41 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AppPrezentationCard from "../appPrezentationCard/AppPrezentationCard";
 import classes from "./AppPrezentation.module.scss";
 
+import UcSeRychleJi from "@/public/images/Uc_se_chytre_ne_dele.webp";
+import AITutor from "@/public/images/AI_tutor_vzdy_po_ruce.webp";
+import MaterialyNaKliknuti from "@/public/images/Materialy_na_jedno_kliknuti.webp";
+import EfektivniZapamativani from "@/public/images/Efektivni_zapamatovani.webp";
+import UcSeKdekoliv from "@/public/images/Uc_se_kdekoliv_a_kdykoliv.webp";
+
 const cards = [
     {
-        title: "Uč se efektivněji s Memoroidem",
-        description: "Mobilní aplikace pro efektivní učení pomocí AI.",
-        imageSrc: "/mockup.webp",
+        title: "Uč se chytře, ne déle",
+        description: "Aplikace rozděluje učivo na malé části a pomáhá ti soustředit se jen na to, co opravdu potřebuješ procvičit.",
+        imageSrc: UcSeRychleJi,
         imageAlt: "Náhled aplikace Memoroid",
     },
     {
-        title: "Flashcards",
-        description: "Vytvářej a prohlížej flashcards pro efektivní zapamatování.",
-        imageSrc: "/mockup.webp",
+        title: "AI tutor vždy po ruce",
+        description: "Chybu ti okamžitě vysvětlí a pomůže pochopit látku bez zdlouhavého hledání informací jinde.",
+        imageSrc: AITutor,
         imageAlt: "Flashcards v aplikaci Memoroid",
     },
     {
-        title: "Kvízy",
-        description: "Otestuj své znalosti pomocí interaktivních kvízů.",
-        imageSrc: "/mockup.webp",
+        title: "Materiály na jedno kliknutí",
+        description: "Nahraj poznámky, PDF nebo text a aplikace z nich automaticky vytvoří kartičky, kvízy i shrnutí.",
+        imageSrc: MaterialyNaKliknuti,
         imageAlt: "Kvízový režim v aplikaci Memoroid",
     },
      {
-        title: "AI Tutor",
-        description: "Otestuj své znalosti pomocí interaktivních kvízů.",
-        imageSrc: "/mockup.webp",
+        title: "Efektivní zapamatování",
+        description: "Díky aktivnímu procvičování a opakování si informace uložíš rychleji a na delší dobu.",
+        imageSrc: EfektivniZapamativani,
         imageAlt: "Kvízový režim v aplikaci Memoroid",
     },
     {
-        title: "Gamifikace",
-        description: "Otestuj své znalosti pomocí interaktivních kvízů.",
-        imageSrc: "/mockup.webp",
+        title: "Uč se kdekoliv a kdykoliv",
+        description: "Všechna data máš uložená v cloudu a synchronizovaná napříč zařízeními – bez omezení.",
+        imageSrc: UcSeKdekoliv,
         imageAlt: "Kvízový režim v aplikaci Memoroid",
     },
 ];
